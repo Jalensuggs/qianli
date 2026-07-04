@@ -385,21 +385,12 @@ h3 {
   font-style: italic;
 }
 .poem__seal {
-  width: 68px;
-  height: 68px;
-  background: var(--zhu);
-  color: var(--paper);
-  font-family: var(--song);
-  font-weight: 900;
-  font-size: 1.9rem;
-  display: grid;
-  place-items: center;
-  border-radius: 6px;
+  width: 110px;
+  height: auto;
   transform: rotate(4deg);
   margin-top: 4.2rem;
-  box-shadow:
-    0 0 0 2px var(--paper),
-    0 0 0 3.5px rgba(156, 51, 36, 0.45);
+  /* 印泥纹理与纸面相乘混合，像真的盖上去的 */
+  mix-blend-mode: multiply;
 }
 
 /* ---------- Scrub（江山万里 pin 屏） ---------- */

@@ -14,4 +14,6 @@ export const ASSETS = {
   // Gallery 两张画（AI 生成 2:3 竖版真图，原始 PNG 备份在 assets-src/）
   boat: '/boat.jpg',
   mountains: '/mountains.jpg',
+  // 诗句屏的朱砂刻章（透明 PNG，原件「刻章.png」备份在 assets-src/）
+  seal: '/seal.png',
 }

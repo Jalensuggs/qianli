@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ASSETS } from '../assets'
 import { REDUCED } from '../lib/motion'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -52,9 +53,7 @@ export default function Poem() {
           </span>
         </span>
       </h2>
-      <div className="poem__seal" aria-hidden="true">
-        印
-      </div>
+      <img className="poem__seal" src={ASSETS.seal} alt="" aria-hidden="true" />
     </section>
   )
 }

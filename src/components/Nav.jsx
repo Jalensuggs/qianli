@@ -23,7 +23,7 @@ export default function Nav() {
   return (
     <nav className="nav">
       <a className="nav__brand" href="#top" onClick={(e) => go(e, '#top')}>
-        <span className="nav__mark">千</span>
+        <span className="nav__mark">画</span>
         <span className="nav__word">QIANLI</span>
       </a>
       <div className="nav__links">
