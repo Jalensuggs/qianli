@@ -417,7 +417,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.45;
+  opacity: 0.85;
 }
 .scrub__video--fallback {
   background:
@@ -429,12 +429,12 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, rgba(237, 226, 200, 0) 20%, var(--paper) 88%),
+    radial-gradient(ellipse at center, rgba(237, 226, 200, 0) 58%, var(--paper) 100%),
     linear-gradient(
       180deg,
       var(--paper),
-      rgba(237, 226, 200, 0) 22%,
-      rgba(237, 226, 200, 0) 76%,
+      rgba(237, 226, 200, 0) 14%,
+      rgba(237, 226, 200, 0) 86%,
       var(--paper)
     );
 }
@@ -449,7 +449,8 @@ h3 {
   font-family: var(--song);
   font-weight: 900;
   font-size: clamp(4.6rem, 18vh, 10.5rem);
-  color: rgba(36, 28, 21, 0.1);
+  color: rgba(36, 28, 21, 0.22);
+  text-shadow: 0 0 32px rgba(237, 226, 200, 0.75);
   user-select: none;
 }
 .scrub__caption {
@@ -459,6 +460,10 @@ h3 {
   max-width: 34ch;
   border-left: 2px solid var(--zhu);
   padding-left: 1.7rem;
+  /* 纸色光晕，保证文字压在视频上仍然清晰 */
+  text-shadow:
+    0 1px 16px var(--paper),
+    0 0 34px var(--paper);
 }
 .scrub__caption h3 {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
