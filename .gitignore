@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# AI 生成素材的原始大文件（已压缩版在 public/）
+assets-src

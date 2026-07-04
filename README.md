@@ -23,17 +23,16 @@ npm run build   # 产物在 dist/
 
 全局层：`Mist.jsx`（canvas 云雾粒子）、`Grain.jsx`（feTurbulence 纸感颗粒）、`Loader.jsx`（朱砂印章加载页）。
 
-## ⚠️ 当前素材全部是占位符
+## 素材状态：已全部替换为 AI 真素材（2026-07-04）
 
-真实素材生成后丢进 `public/`，然后**只改 [src/assets.js](src/assets.js) 一个文件**：
-
-| 占位文件 | 替换为 | 生成方式 |
+| 文件 | 内容 | 来源 |
 |---|---|---|
-| `boat.svg` | `boat.jpg`（1200×1800, 2:3） | Midjourney，prompt 见下 |
-| `mountains.svg` | `mountains.jpg`（同上） | Midjourney |
-| `mountains_grow.mp4` | 同名替换（1280×720, 5s 循环） | 可灵：云雾在青绿山峦间缓慢流动，无缝循环 |
-| `river_scroll.mp4` | 同名替换（1280×720, 5s 单向） | 可灵：小舟从左漂到右，单向变化 |
-| `ink_bloom.mp4` | 同名替换（1280×720, 5s 单向） | 可灵：浓墨在宣纸上晕开成山形 |
+| `mountains_grow.jpg` | 首屏静态背景（原方案为视频，改为静态图+呼吸缩放） | ChatGPT/Gemini 生图 |
+| `boat.jpg` / `mountains.jpg` | 画廊两张 2:3 竖版青绿山水 | ChatGPT/Gemini 生图 |
+| `river_scroll.mp4` | 归舟右→左（滚动驱动，已 `-g 1` 全关键帧） | 可灵首尾帧 |
+| `ink_bloom.mp4` | 墨迹晕开成山（滚动驱动，已 `-g 1`） | 可灵首尾帧 |
+
+原始 PNG 大图备份在 `assets-src/`（已 gitignore，不会部署）。
 
 **生图三行铁律**（塞进所有 prompt）：
 
