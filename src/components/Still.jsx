@@ -64,7 +64,7 @@ export default function Still() {
         )}
         <div className="still__wash" />
         <div className="still__wu" aria-hidden="true">
-          無
+          墨
         </div>
         <div className="still__quote">
           <span className="still__cn">舟自知歸</span>
