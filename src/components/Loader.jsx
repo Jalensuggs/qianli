@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// 首屏加载印章：朱砂「歸」字 1.5s 后淡出。
+// 首屏加载印章：朱砂「归」字 1.5s 后淡出。
 export default function Loader({ onDone }) {
   const [show, setShow] = useState(true)
 
@@ -27,7 +27,7 @@ export default function Loader({ onDone }) {
             animate={{ scale: 1, opacity: 1, rotate: -4 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            歸
+            归
           </motion.div>
           <div className="loader__bar">
             <motion.span

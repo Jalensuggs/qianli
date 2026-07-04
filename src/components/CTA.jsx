@@ -45,7 +45,7 @@ export default function CTA() {
 
   return (
     <footer className="cta" id="visit" ref={root}>
-      <span className="cta__cn">歸來</span>
+      <span className="cta__cn">归来</span>
       <h2>
         <Chars text="Come home and watch the spring river." />
       </h2>
@@ -58,8 +58,8 @@ export default function CTA() {
         Set sail again ↑
       </button>
       <div className="cta__org">
-        <span>© 2026 Qianli Atelier · 江山無恙</span>
-        <span className="cta__org-cn">千里江山圖卷</span>
+        <span>© 2026 Qianli Atelier · 江山无恙</span>
+        <span className="cta__org-cn">千里江山图卷</span>
       </div>
     </footer>
   )

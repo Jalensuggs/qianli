@@ -229,8 +229,8 @@ h3 {
 .nav__cta {
   border: 1px solid var(--ink-soft);
   border-radius: 999px;
-  padding: 0.55em 1.5em;
-  font-size: 0.85rem !important;
+  padding: 0.5em 1.4em;
+  /* 字号继承 .nav__links a，任何断点下都与其他链接一致 */
   transition:
     background 0.35s,
     color 0.35s,
@@ -402,7 +402,7 @@ h3 {
     0 0 0 3.5px rgba(156, 51, 36, 0.45);
 }
 
-/* ---------- Scrub（江山萬里 pin 屏） ---------- */
+/* ---------- Scrub（江山万里 pin 屏） ---------- */
 .scrub {
   position: relative;
 }
@@ -720,9 +720,9 @@ h3 {
 
 /* ---------- 移动端 ---------- */
 @media (max-width: 860px) {
-  .nav__links a:not(.nav__cta) {
-    font-size: 0.82rem;
-    letter-spacing: 0.2em;
+  .nav__links a {
+    font-size: 0.88rem;
+    letter-spacing: 0.22em;
   }
   .hero__vertical {
     display: none;

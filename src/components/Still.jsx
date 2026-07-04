@@ -42,7 +42,7 @@ export default function Still() {
   }, [])
 
   return (
-    <section className="still" id="yun" ref={root}>
+    <section className="still" id="mo" ref={root}>
       <div className="still__pin">
         {videoOk ? (
           <video
@@ -67,13 +67,14 @@ export default function Still() {
           墨
         </div>
         <div className="still__quote">
-          <span className="still__cn">舟自知歸</span>
+          <span className="still__cn">舟自知归</span>
+          {/* 「舟自知归」：舟不需指引，自认归途 */}
           <span className="reveal-line">
-            <span className="still__line">The boat does not know where it goes —</span>
+            <span className="still__line">The boat needs no telling —</span>
           </span>
           <span className="reveal-line">
             <span className="still__line">
-              <em>and that is the way home.</em>
+              <em>it knows its own way home.</em>
             </span>
           </span>
         </div>

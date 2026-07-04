@@ -37,7 +37,8 @@ export default function Hero({ play }) {
         <h1 className="hero__title">
           <Chars text="QIANLI" />
         </h1>
-        <p className="hero__sub">A thousand li between us and the mountains.</p>
+        {/* 右侧竖排「山如青玉，江似素练」的对译 */}
+        <p className="hero__sub">Mountains of green jade, a river of white silk.</p>
       </div>
       <div className="hero__vertical">山如青玉，江似素练</div>
       <div className="hero__scroll">

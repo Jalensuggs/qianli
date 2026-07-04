@@ -38,7 +38,7 @@ export default function Poem() {
   }, [])
 
   return (
-    <section className="poem" id="shui" ref={root}>
+    <section className="poem" id="shi" ref={root}>
       <p className="poem__cn">江山不老</p>
       <h2 className="poem__text">
         <span className="reveal-line">

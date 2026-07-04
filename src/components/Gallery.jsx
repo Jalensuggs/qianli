@@ -84,11 +84,12 @@ export default function Gallery() {
   }, [])
 
   return (
-    <section className="gallery" id="zhou" ref={root}>
+    <section className="gallery" id="hua" ref={root}>
       <div className="gallery__head">
-        <span className="gallery__cn">千里江山圖卷</span>
+        <span className="gallery__cn">千里江山图卷</span>
+        {/* 《千里江山图》的通行英译名 */}
         <h2>
-          <Chars text="Rivers & Mountains" />
+          <Chars text="A Thousand Li of Rivers and Mountains" />
         </h2>
       </div>
       {PANELS.map((p) => (

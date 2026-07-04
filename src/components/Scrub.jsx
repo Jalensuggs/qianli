@@ -7,7 +7,7 @@ import { REDUCED } from '../lib/motion'
 gsap.registerPlugin(ScrollTrigger)
 
 // 滚动驱动屏：页面 pin 住，滚动进度 = 视频播放进度。
-// 「江山萬里」四个巨字随进度逐个浮现。
+// 「江山万里」四个巨字随进度逐个浮现。
 export default function Scrub() {
   const root = useRef(null)
   const vid = useRef(null)
@@ -46,7 +46,7 @@ export default function Scrub() {
   }, [])
 
   return (
-    <section className="scrub" id="shan" ref={root}>
+    <section className="scrub" id="jiang" ref={root}>
       <div className="scrub__pin">
         {videoOk ? (
           <video
@@ -69,15 +69,16 @@ export default function Scrub() {
         )}
         <div className="scrub__wash" />
         <div className="scrub__kanji" aria-hidden="true">
-          {'江山萬里'.split('').map((c, i) => (
+          {'江山万里'.split('').map((c, i) => (
             <span className="scrub__char" key={i}>
               {c}
             </span>
           ))}
         </div>
         <div className="scrub__caption">
-          <h3>The river turns another page.</h3>
-          <p>The current is yours while you scroll; the boat only borrows it.</p>
+          {/* 「江山万里」的信达雅对译 */}
+          <h3>Ten thousand li of rivers and mountains.</h3>
+          <p>As you scroll, the handscroll unrolls — the boat borrows its current from your hand.</p>
         </div>
       </div>
     </section>

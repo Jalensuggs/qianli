@@ -1,8 +1,10 @@
+// 一字一章，顺序与页面滚动顺序一致：
+// 诗(诗句屏) → 江(江山万里卷) → 画(画廊) → 墨(墨屏) → 归来(尾屏)
 const LINKS = [
-  ['山', '#shan'],
-  ['水', '#shui'],
-  ['雲', '#yun'],
-  ['歸舟', '#zhou'],
+  ['诗', '#shi'],
+  ['江', '#jiang'],
+  ['画', '#hua'],
+  ['墨', '#mo'],
 ]
 
 // 导航点击走 Lenis 平滑滚动；Lenis 不在（reduced-motion）时退回原生 smooth。
@@ -31,7 +33,7 @@ export default function Nav() {
           </a>
         ))}
         <a className="nav__cta" href="#visit" onClick={(e) => go(e, '#visit')}>
-          歸來
+          归来
         </a>
       </div>
     </nav>
