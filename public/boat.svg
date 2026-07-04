@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1800">
+  <!-- 占位画《归舟》：拿到 Midjourney 真图后换成 boat.jpg -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ede2c8"/>
+      <stop offset=".5" stop-color="#e3ddc9"/>
+      <stop offset="1" stop-color="#ede2c8"/>
+    </linearGradient>
+    <radialGradient id="melt" cx=".5" cy=".5" r=".72">
+      <stop offset=".58" stop-color="#ede2c8" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ede2c8"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1800" fill="url(#sky)"/>
+
+  <!-- 远山（灰青，两层） -->
+  <path d="M0 780 Q150 520 280 710 Q360 560 470 730 L470 920 L0 920 Z" fill="#9db4c4" opacity=".35"/>
+  <path d="M320 800 Q480 430 640 750 Q730 570 850 780 L850 980 L320 980 Z" fill="#7f9db4" opacity=".45"/>
+
+  <!-- 主峰（石青） -->
+  <path d="M500 900 Q690 330 890 830 Q975 640 1120 870 L1200 910 L1200 1080 L500 1080 Z" fill="#3d6b96" opacity=".8"/>
+  <path d="M740 920 Q870 600 1005 900 L1005 1000 L740 1000 Z" fill="#345a7e" opacity=".7"/>
+
+  <!-- 近坡（石绿） -->
+  <path d="M0 1020 Q230 820 470 1020 Q660 880 880 1040 Q1050 940 1200 1050 L1200 1210 L0 1210 Z" fill="#5a8a6e" opacity=".5"/>
+
+  <!-- 云雾带 -->
+  <ellipse cx="600" cy="1075" rx="580" ry="95" fill="#ede2c8" opacity=".6"/>
+  <ellipse cx="360" cy="965" rx="430" ry="70" fill="#ede2c8" opacity=".45"/>
+  <ellipse cx="880" cy="1010" rx="380" ry="60" fill="#ede2c8" opacity=".4"/>
+
+  <!-- 江面水纹 -->
+  <g stroke="#3d6b96" opacity=".25" fill="none">
+    <path d="M120 1330 H660" stroke-width="3"/>
+    <path d="M300 1415 H1000" stroke-width="2.5"/>
+    <path d="M150 1500 H780" stroke-width="2"/>
+    <path d="M420 1580 H1080" stroke-width="2"/>
+    <path d="M240 1655 H860" stroke-width="1.5"/>
+  </g>
+
+  <!-- 归舟 -->
+  <g fill="#241c15">
+    <path d="M535 1352 Q605 1385 705 1352 L678 1396 Q602 1415 562 1396 Z"/>
+    <rect x="616" y="1292" width="6" height="64"/>
+    <path d="M622 1296 Q658 1316 624 1340 Z" opacity=".85"/>
+    <circle cx="600" cy="1348" r="7"/>
+  </g>
+  <!-- 倒影 -->
+  <path d="M560 1408 Q610 1424 680 1408 L668 1424 Q612 1436 572 1424 Z" fill="#241c15" opacity=".18"/>
+
+  <!-- 朱砂印章 -->
+  <g transform="translate(1040,140) rotate(6)">
+    <rect width="64" height="64" rx="6" fill="#9c3324"/>
+    <text x="32" y="47" font-family="Songti SC, Noto Serif SC, serif" font-size="40" fill="#ede2c8" text-anchor="middle">歸</text>
+  </g>
+
+  <!-- 边缘融入纸面 -->
+  <rect width="1200" height="1800" fill="url(#melt)"/>
+</svg>

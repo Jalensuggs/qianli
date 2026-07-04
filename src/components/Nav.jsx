@@ -1,0 +1,39 @@
+const LINKS = [
+  ['山', '#shan'],
+  ['水', '#shui'],
+  ['雲', '#yun'],
+  ['歸舟', '#zhou'],
+]
+
+// 导航点击走 Lenis 平滑滚动；Lenis 不在（reduced-motion）时退回原生 smooth。
+export default function Nav() {
+  const go = (e, hash) => {
+    e.preventDefault()
+    const el = document.querySelector(hash)
+    if (!el) return
+    if (window.__lenis) {
+      window.__lenis.scrollTo(el, { offset: 0, duration: 1.6 })
+    } else {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  return (
+    <nav className="nav">
+      <a className="nav__brand" href="#top" onClick={(e) => go(e, '#top')}>
+        <span className="nav__mark">千</span>
+        <span className="nav__word">QIANLI</span>
+      </a>
+      <div className="nav__links">
+        {LINKS.map(([label, hash]) => (
+          <a key={hash} href={hash} onClick={(e) => go(e, hash)}>
+            {label}
+          </a>
+        ))}
+        <a className="nav__cta" href="#visit" onClick={(e) => go(e, '#visit')}>
+          歸來
+        </a>
+      </div>
+    </nav>
+  )
+}
