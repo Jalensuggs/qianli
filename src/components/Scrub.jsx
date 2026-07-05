@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ASSETS } from '../assets'
 import { REDUCED } from '../lib/motion'
+import { primeScrubVideo } from '../lib/scrubVideo'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -15,6 +16,7 @@ export default function Scrub() {
 
   useEffect(() => {
     if (REDUCED) return
+    const unprime = primeScrubVideo(vid.current)
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -42,7 +44,10 @@ export default function Scrub() {
         .from('.scrub__caption', { y: 70, opacity: 0, duration: 1, ease: 'none' }, '-=0.5')
         .to({}, { duration: 0.6 }) // 尾部留白，让文案停留一段
     }, root)
-    return () => ctx.revert()
+    return () => {
+      unprime()
+      ctx.revert()
+    }
   }, [])
 
   return (

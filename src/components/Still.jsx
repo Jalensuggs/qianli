@@ -3,10 +3,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ASSETS } from '../assets'
 import { REDUCED } from '../lib/motion'
+import { primeScrubVideo } from '../lib/scrubVideo'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// 静止屏：墨迹晕开视频被滚动驱动，「無」字缩放浮现，禅意收束。
+// 静止屏：墨迹晕开视频被滚动驱动，「墨」字缩放浮现，禅意收束。
 export default function Still() {
   const root = useRef(null)
   const vid = useRef(null)
@@ -14,6 +15,7 @@ export default function Still() {
 
   useEffect(() => {
     if (REDUCED) return
+    const unprime = primeScrubVideo(vid.current)
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -38,7 +40,10 @@ export default function Still() {
         )
         .to({}, { duration: 0.5 })
     }, root)
-    return () => ctx.revert()
+    return () => {
+      unprime()
+      ctx.revert()
+    }
   }, [])
 
   return (
