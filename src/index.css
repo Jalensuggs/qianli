@@ -127,6 +127,20 @@ h3 {
   z-index: 80;
 }
 
+/* ---------- 水墨涟漪 / 远山飞鸟 canvas ---------- */
+#ripples {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 75;
+}
+#birds {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 78;
+}
+
 /* ---------- Loader ---------- */
 .loader {
   position: fixed;

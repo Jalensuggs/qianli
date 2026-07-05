@@ -7,6 +7,8 @@ import { REDUCED } from './lib/motion'
 import Loader from './components/Loader'
 import Grain from './components/Grain'
 import Mist from './components/Mist'
+import Ripples from './components/Ripples'
+import Birds from './components/Birds'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Poem from './components/Poem'
@@ -42,6 +44,8 @@ export default function App() {
       <Loader onDone={() => setReady(true)} />
       <Grain />
       <Mist />
+      <Ripples />
+      <Birds />
       <Nav />
       <main>
         <Hero play={ready} />
