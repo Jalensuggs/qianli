@@ -34,7 +34,7 @@ export default function Ripples() {
         y,
         r: big ? 6 : 3,
         growth: big ? 2.2 : 1.5,
-        alpha: big ? 0.16 : 0.11,
+        alpha: big ? 0.34 : 0.24,
       })
     }
 
@@ -60,14 +60,14 @@ export default function Ripples() {
         const p = ripples[i]
         p.r += p.growth
         p.growth *= 0.982 // 扩散逐渐减速，像真实水波
-        p.alpha *= 0.958
+        p.alpha *= 0.964
         if (p.alpha < 0.006) {
           ripples.splice(i, 1)
           continue
         }
         // 双环：外环实一点，内环虚一点，更像墨晕
         ctx.strokeStyle = `rgba(36, 28, 21, ${p.alpha})`
-        ctx.lineWidth = 1.3
+        ctx.lineWidth = 1.7
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
         ctx.stroke()
