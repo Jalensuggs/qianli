@@ -16,4 +16,6 @@ export const ASSETS = {
   mountains: '/mountains.jpg',
   // 诗句屏的朱砂刻章（透明 PNG，原件「刻章.png」备份在 assets-src/）
   seal: '/seal.png',
+  // 背景音乐（用户原创曲）
+  bgm: '/qianli.mp3',
 }

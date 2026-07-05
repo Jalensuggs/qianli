@@ -1,3 +1,5 @@
+import SoundToggle from './SoundToggle'
+
 // 一字一章，顺序与页面滚动顺序一致：
 // 诗(诗句屏) → 江(江山万里卷) → 画(画廊) → 墨(墨屏) → 归来(尾屏)
 const LINKS = [
@@ -35,6 +37,7 @@ export default function Nav() {
         <a className="nav__cta" href="#visit" onClick={(e) => go(e, '#visit')}>
           归来
         </a>
+        <SoundToggle />
       </div>
     </nav>
   )

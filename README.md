@@ -27,6 +27,7 @@ npm run build   # 产物在 dist/
 - `Loader.jsx` — 朱砂印章加载页（Framer Motion）
 - `Ripples.jsx` — 水墨涟漪（鼠标/触摸互动，Canvas 2D）
 - `Birds.jsx` — 远山飞鸟（每 20~40 秒掠过一队，Canvas 2D）
+- `SoundToggle.jsx` — 背景音乐 + 导航栏声波静音开关（自动播放被浏览器拦截时，首次交互瞬间开播）
 
 ## 素材（AI 生成）
 
@@ -38,6 +39,7 @@ npm run build   # 产物在 dist/
 | `seal.png` | 诗句屏朱砂印章 | ChatGPT / Gemini |
 | `river_scroll.mp4` | 江山万里屏滚动驱动视频 | 可灵首尾帧 |
 | `ink_bloom.mp4` | 墨屏滚动驱动视频 | 可灵首尾帧 |
+| `qianli.mp3` | 背景音乐《千里》 | 用户原创 |
 
 **滚动驱动视频必须用 `-g 1` 重编码**（全关键帧），否则拖动会跳帧：
 
