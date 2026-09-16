@@ -1,5 +1,7 @@
 # 千里江山 · QIANLI
 
+**GitHub Pages 预览 →** https://jalensuggs.github.io/qianli/
+
 宋代青绿山水主题的沉浸式单页概念站。灵感来自 [oneshot-sakura.vercel.app](https://oneshot-sakura.vercel.app/)，以 Vibecoding 方式从零构建。
 
 **技术栈**：Vite + React 19 · GSAP ScrollTrigger · Lenis 平滑滚动 · Framer Motion · Canvas 2D（无 Tailwind，纯 CSS 变量）
